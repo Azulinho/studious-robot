@@ -1,3 +1,4 @@
 opg-ansible-roles
 secrets.json
 venv
+.vagrant/
