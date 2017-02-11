@@ -1,0 +1,21 @@
+---
+
+- hosts: aws
+
+  vars:
+  # create an IAM user and a S3 bucket
+    iam_user_users:
+     - name: s3user1
+       group: developer
+
+    opg_data:
+      stack: 'myownstack'
+    s3_bucket_suffix: false
+
+    s3_buckets:
+      - { name: 'my-bucket' }
+
+  roles:
+    - iam-user
+    - ec2-s3-bucket
+
